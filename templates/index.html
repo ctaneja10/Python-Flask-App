@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/home-bg.jpg') }}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>{{params['name']}}</h1>
+                    <span class="subheading">Python Developer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+
+
+
+
+
+
+            <!-- Post preview-->
+            <!-- Todo fetch it using for loop from the database -->
+            {% for post in posts %}    
+            <div class="post-preview">
+              <a href="/post/{{post.slug}}">
+                <h2 class="post-title">{{ post.title }}
+  
+                </h2>
+                <h3 class="post-subtitle">
+                  {{post.tagline}}
+                </h3>
+              </a>
+              <p class="post-meta">Posted by
+                <a href="/">User</a>
+                on {{post.date}}</p>
+            </div>
+  
+            {{post.content[0:143]}}...
+            <hr>
+  </li></a>
+            {% endfor %}
+
+
+
+
+
+            <!-- Pager-->
+            <!-- <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#">Older Posts
+                    →</a></div>  -->
+             <a class="d-flex mb-4 btn btn-primary float-start text-uppercase" href="{{next}}">Next &#8594
+            </a>   
+             <a class="d-flex mb-4 btn btn-primary float-end text-uppercase" href="{{prev}}">&#8592 Previous</a> 
+                    
+        </div>
+    </div>
+</div>
+
+{% endblock %}

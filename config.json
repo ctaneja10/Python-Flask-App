@@ -1,0 +1,18 @@
+{
+  "params":
+  {
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/flaskapp",
+    "prod_uri": "mysql://root:@localhost/flaskapp",
+    "fb_url": "https://www.facebook.com/chetan.taneja.779",
+    "twitter_url": "https://twitter.com/ctaneja10",
+    "git_url": "https://github.com/ctaneja10",
+    "email": "your email id",
+    "password": "your password or key",
+    "no_of_posts": 4,
+    "name": "Chetan Taneja",
+    "username": "chetan",
+    "u_password": "chetan",
+    "upload_location": "C:\\Users\\ctane\\PycharmProjects\\flask app\\static\\assets\\img"
+  }
+}
